@@ -10,6 +10,10 @@ NaN: Not a Number
 /: Divisão
 %: Resto da divisão
 **: Exponenciação
+++: incrementar em 1
+--: decrementar em 1
++=2: incrementar em 2
+-=2:
 
 String:
 Declaração entre '' ou ""
@@ -41,6 +45,16 @@ console.log('Números:')
 console.log(Infinity)
 console.log(-Infinity)
 console.log(0/0 + "\n")
+console.log(5+2)
+console.log(5-2)
+console.log(5*2)
+console.log(5/2)
+console.log(5%2)
+console.log(5**2)
+var i=5
+console.log(i+=2)
+console.log(i-=2)
+console.log(i*=2)
 console.log()
 console.log('Strings:')
 console.log('Primeira linha\nSegunda Linha')
