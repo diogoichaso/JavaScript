@@ -102,9 +102,26 @@ function pontecia(base, exp){
 
     return res
 }
-
 console.log(pontecia(2))
 console.log(pontecia(2, 3))
+console.log()
+
+//NÚMEROS DE PARÂMETROS VARIÁVEIS
+console.log('NÚMEROS DE PARÂMETROS VARIÁVEIS')
+function ola2(){
+    var mensagem = "Olá "
+
+    for (var i=0; i<arguments.length - 1; i++){
+        mensagem += arguments[i]
+        if (i < arguments.length - 2){
+            mensagem += ', '
+        }
+    }
+    mensagem += "e " + arguments[arguments.length-1] + "! Tudo bem?"
+    console.log(mensagem)
+}
+ola2("Diogo", "Fernanda", "Gabriel", "Guilherme")
+ola2("Cadu", "Cyntia", "Lucas")
 console.log()
 
 //FUNÇÃO RECURSIVA

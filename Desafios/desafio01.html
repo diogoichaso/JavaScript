@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Com o conhecimento de objetos em mãos construa um programinha de controle de convidados mais elaborado, considerando as propriedades:
+        Nome
+        Idade
+        CPF
+        Permita que o cadastrante digite estas informações em nosso array de convidados
+        
+        Permitir Busca por qualquer parâmetro*/
+        var convidados = [];
+        while(true) {
+
+            var nome = prompt("Digite o nome do convidado ou S para sair");
+            if (nome == "S") {
+                break;
+            } 
+            var idade = Number(prompt("Digite a idade do convidado"));
+            var cpf = prompt("Digite o CPF do convidado");
+        
+            
+                convidados.push({nome: nome, idade: idade, cpf: cpf});
+        }
+        console.log(convidados);  
+
+        var par = prompt('Informe o parâmetro para busca')
+        var val = prompt(`informe o valor para busca de ${par}`)
+        for (var i in convidados){
+            if ((par == "idade" && convidados[i].idade == val) || (par == "nome" && convidados[i].nome == val) || (par=="cpf" && convidados[i].cpf == val)){
+                console.log(convidados[i].nome)
+            }
+        }
+
+    </script>
+</body>
+</html>
