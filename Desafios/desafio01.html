@@ -19,7 +19,7 @@
         while(true) {
 
             var nome = prompt("Digite o nome do convidado ou S para sair");
-            if (nome == "S") {
+            if (nome == "S" || nome =='s') {
                 break;
             } 
             var idade = Number(prompt("Digite a idade do convidado"));
@@ -30,14 +30,14 @@
         }
         console.log(convidados);  
 
-        var par = prompt('Informe o parâmetro para busca')
+        var par = prompt('Informe o parâmetro para busca(nome, idade ou cpf)')
         var val = prompt(`informe o valor para busca de ${par}`)
         for (var i in convidados){
             if ((par == "idade" && convidados[i].idade == val) || (par == "nome" && convidados[i].nome == val) || (par=="cpf" && convidados[i].cpf == val)){
                 console.log(convidados[i].nome)
             }
         }
-
+        var frase = "Testando, 1, 2, 3, testando."
     </script>
 </body>
 </html>
