@@ -20,3 +20,7 @@ if ((idade < 18) && (genero == 'F')){
 } else{
     console.log('Entrada proibida')
 }
+
+idade = 18
+var resp = idade >= 18 ? "maior" : "menor"
+console.log(resp)
