@@ -47,8 +47,34 @@ alunos[3].idade = 1
 console.log(alunos)
 console.log()
 
-//Objetos em Arrays
-//Filtrando Arrays
+//ORDENARÇÃO
+//ORDENANDO POR NOME
+console.log('ORDENARÇÃO')
+console.log('ORDENANDO POR NOME')
+function compareNome(a,b) {
+    if (a.nome < b.nome)
+       return -1;
+    if (a.nome > b.nome)
+      return 1;
+    return 0;
+}
+console.log(alunos.sort(compareNome))
+console.log()
+
+//ORDENANDO POR IDADE
+console.log('ORDENANDO POR IDADE')
+function compareIdade(a,b) {
+    if (a.idade < b.idade)
+       return -1;
+    if (a.idade > b.idade)
+      return 1;
+    return 0;
+}
+console.log(alunos.sort(compareIdade))
+console.log()
+
+//FILTRANDO
+console.log('FILTRANDO')
 var filme = [
     {titulo: 'Titanic', duracao: 195, nota: 7.5},
     {titulo: 'Vingadores', duracao: 203, nota: 9.5},
@@ -86,6 +112,7 @@ console.log()
 
 //MAPEANDO ARRAYS - Alterada dados do Array
 //Alterna nomes para maiúscula
+console.log('MAPEANDO ARRAYS')
 var convidados = [
     {nome: 'daniel', vip: true, idade: 21},
     {nome: 'GaBriEl', vip: true, idade: 54},
@@ -102,7 +129,7 @@ console.log()
 
 //REDUÇÃO - Agrupamento
 //reduce(function(acumulador, item, indice, array), inicio) - início é opcional
-
+console.log('REDUÇÃO')
 var carros = [
     {marca: 'Audi', cor: 'preto'},
     {marca: 'Audi', co: 'branco'},
@@ -163,6 +190,7 @@ console.log(produtosFiltrados)
 console.log()
 
 //Passo a passo
+console.log('Agrupar por categoria - Passo a passo')
 Array.prototype.groupBy = function(prop){
     var valor = this.reduce(function(total, item, indice){
         console.log('Indice:')
