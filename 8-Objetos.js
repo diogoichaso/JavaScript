@@ -1,31 +1,83 @@
+//OBJETOS
+//Estruturas de dados 
+//Criação Direta
+var pessoa = {
+    //Propriedades ou Atributos
+    nome: 'Diogo',
+    idade: 41,
+    dataNascimento:{
+        dia: 08, 
+        mes: 12, 
+        ano: 1980
+    },
+    cpf: "123.456.789-10",
+    hobies: ['Jogos', 'Futebol', 'Programação'],
+
+    //Métodos
+    fazerAniversario: function (){
+        this.idade++
+        console.log(`Feliz Aniversário. Você completou ${this.idade} anos`)
+    },
+
+    bomDia: function(nome){
+        console.log(`Bom dia, ${nome}`)
+    }
+}
+console.log(pessoa)
+console.log(`pessoa.nome: ${pessoa.nome}`)
+console.log(`pessoa['nome']: ${pessoa['nome']}`)
+console.log(pessoa['cpf'])
+console.log(pessoa.cpf)
+console.log(pessoa.hobies[1])
+pessoa.fazerAniversario()
+pessoa.bomDia('Fernanda')
+console.log()
+
+//Declaração de Objetos
+//"Criação Fragmentada"
+console.log('Criação Fragmentada')
 var pessoa = {}
 pessoa.nome = "Diogo"
 console.log(pessoa)
 pessoa.idade = 41
 console.log(pessoa)
+pessoa['cpf'] = "123.456.789-10"
+console.log(pessoa)
 console.log(pessoa.nome)
 console.log(pessoa.idade)
-console.log()
-
-var convidado1 = {nome: "Diogo", idade: 41}
-var convidado2 = convidado1
-var convidade3 = {nome: "Diogo", idade: 41}
-console.log(convidado1 == convidado2)
-console.log(convidado1 == convidade3)
-console.log()
-
-//CONSULTA A DADOS DE OBJETOS POR HASH
-console.log('CONSULTA A DADOS DE OBJETOS POR HASH')
-var aluno = {}
-aluno["116637"] = {nome: "Diogo", idade: 41}
-mat = "116637"
-console.log(aluno[mat])
-console.log()
-aluno["31149"] = {nome: "Ogoid", idade: 23}
-for (var id in aluno)
-{
- console.log(aluno[id]);
+pessoa.boaNoite = function(nome){
+    console.log(`Boa noite, ${nome}`)
 }
+console.log(pessoa)
+pessoa.boaNoite('Fernanda')
+console.log()
+
+//Igualdade de objetos
+console.log('Igualdade de objetos')
+var pessoa1 = {nome: "Diogo", idade: 41, time: 'Flamengo'}
+var pessoa2 = pessoa1 // pessoa 2 é uma referência a pessoa 1. "Mesma pessoa"
+var pessoa3 = {nome: "Diogo", idade: 41, time: 'Flamengo'}
+console.log(pessoa1 == pessoa2)
+console.log(pessoa1 == pessoa3)
+console.log(`pessoa1.time: ${pessoa1.time}`)
+console.log(`pessoa2.time: ${pessoa2.time}`)
+pessoa2.time = 'Dodgers'
+console.log(`pessoa1.time: ${pessoa1.time}`)
+console.log(`pessoa2.time: ${pessoa2.time}`)
+console.log()
+
+//Copiando Objeto
+console.log('Copiando objeto')
+console.log(pessoa1)
+var pessoa4 = Object.create(pessoa1)//"Cria um clone" - Se nenhum atribuito for instanciado, utiliza o atributo do objeto pai
+console.log(pessoa4)
+pessoa4.time = 'Flamengo'
+console.log(`pessoa1.time: ${pessoa1.time}`)
+console.log(`pessoa4.time: ${pessoa4.time}`)
+pessoa1.time = 'Cubs'
+console.log(`pessoa1.time: ${pessoa1.time}`)
+console.log(`pessoa4.time: ${pessoa4.time}`)
+console.log()
 
 //ARRAYS DE OBJETOS
 console.log('ARRAYS DE OBJETOS')
@@ -37,6 +89,21 @@ alunos.push({nome: "Gustavo", idade: 1, dataNascimento: {dia: 18, mes: 8, ano: 2
 console.log(alunos)
 console.log(alunos[0].nome)
 console.log(alunos[1].dataNascimento.ano)
+console.log()
+
+//CONSULTA A DADOS DE OBJETOS POR HASH
+console.log('CONSULTA A DADOS DE OBJETOS POR HASH')
+var aluno = []
+aluno["116637"] = {nome: "Diogo", idade: 41}
+mat = "116637"
+console.log(aluno[mat])
+console.log()
+aluno["31149"] = {nome: "Ogoid", idade: 23}
+console.log('Percorrendo Array pela Hash')
+for (var id in aluno)
+{
+ console.log(aluno[id]);
+}
 console.log()
 
 //DELETAR ATRIBUTO
