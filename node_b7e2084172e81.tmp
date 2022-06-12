@@ -1,0 +1,14 @@
+//interface pelo Terminal
+//Para aceitar a entrada do usuário do console NodeJS, você precisa usar o módulo readline, através da função require.
+
+const leitor = require('readline')
+const ler = leitor.createInterface({
+    input: process.stdin
+})
+
+function dado(reposta) {
+    return reposta
+}
+
+var nome = ler.question('Qual é o seu nome?', dado())
+console.log(nome)

@@ -1,0 +1,5 @@
+//interface pelo Terminal
+const teclado = require('prompt-sync')();
+let hora = teclado("Informe a hora de entrada: ");
+let compra = teclado("Infome o valor da compra: ");
+let cupom = teclado("Informe o nome do cupom: ");

@@ -71,3 +71,10 @@ console.log(Boolean(1))
 console.log(typeof("4"))
 console.log(typeof(3))
 console.log(typeof(true))
+
+//Constantes - não podem ser alteradas após declaração
+
+const cpf = '123.456.789-00'
+console.log(cpf)
+
+cpf = '009.876.543-21'
