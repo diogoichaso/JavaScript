@@ -52,6 +52,32 @@ console.log(pessoa)
 pessoa.boaNoite('Fernanda')
 console.log()
 
+//DESESTRUTURAÇÃO
+console.log('DESESTRUTURAÇÃO')
+const convidado = {
+    nome: "Diogo", 
+    idade: 41, 
+    endereco: {logadrouro: "Rua 1", numero: 399}
+}
+
+const {
+    nome, 
+    idade, 
+    endereco: {numero}
+} = convidado
+
+console.log(nome)
+console.log(idade)
+console.log(numero)
+console.log()
+
+function imprimir ({nome, idade}) {
+    console.log(nome)
+    console.log(idade)
+}
+imprimir(convidado)
+console.log()
+
 //Igualdade de objetos
 console.log('Igualdade de objetos')
 var pessoa1 = {nome: "Diogo", idade: 41, time: 'Flamengo'}
