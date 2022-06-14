@@ -124,17 +124,6 @@ ola2("Diogo", "Fernanda", "Gabriel", "Guilherme")
 ola2("Cadu", "Cyntia", "Lucas")
 console.log()
 
-//FUNÇÃO RECURSIVA
-function fatorial(num){
-    if(num == 1){
-        return 1
-    }else{
-        return num * fatorial(num-1)
-    }
-}
-
-console.log(fatorial(5))
-
 //ESCOPO DE VARIÁVEIS
 //var - Escopo global
 //let - escopo local
@@ -146,3 +135,24 @@ function Ola(){
 
 console.log(nome)
 Ola()
+
+//ARROW FUNCTION
+var soma = (x, y) => x + y
+
+console.log(soma(3, 4))
+
+var dobra = (x) => {
+  return x * 2
+}
+
+console.log(dobra(4))
+//FUNÇÃO RECURSIVA
+function fatorial(num){
+    if(num == 1){
+        return 1
+    }else{
+        return num * fatorial(num-1)
+    }
+}
+
+console.log(fatorial(5))
