@@ -60,6 +60,15 @@ console.log(calculadora(x, y, mult))
 console.log(calculadora(x, y, div))
 console.log()
 
+//ESCOPO DE VARIÁVEIS
+//var - Escopo global
+//let - escopo local
+var nome = 'Gabriel'
+function Ola(){
+  let nome = 'Diogo'
+  console.log(nome)
+}
+
 //MODIFICAÇÃO DE FUNÇÃO
 function lancarMisselNuclear() {
     console.log('Lançando em 3..2..1. Lançado')
@@ -84,19 +93,19 @@ function ola(quem){
        console.log('Olá ' + quem)
    }
 }
-
 ola('Diogo')
 ola()
 console.log()
 
 //PARÂMETROS OPCIONAIS
+//Por undefined
 function pontecia(base, exp){
     if(exp == undefined){
         exp = 2
     }
 
-    var res = 1
-    for (var cont = 0; cont < exp; cont ++){
+    let res = 1
+    for (let cont = 0; cont < exp; cont ++){
         res *= base
     }
 
@@ -106,12 +115,24 @@ console.log(pontecia(2))
 console.log(pontecia(2, 3))
 console.log()
 
+//Por valor padrão
+function pontecia(base, exp = 1){
+    let res = 1 
+    for (let cont = 0; cont < exp; cont ++){
+        res *= base
+    }
+    return res
+}
+console.log(pontecia(2))
+console.log(pontecia(2, 3))
+console.log()
+
 //NÚMEROS DE PARÂMETROS VARIÁVEIS
 console.log('NÚMEROS DE PARÂMETROS VARIÁVEIS')
 function ola2(){
-    var mensagem = "Olá "
+    let mensagem = "Olá "
 
-    for (var i=0; i<arguments.length - 1; i++){
+    for (let i=0; i<arguments.length - 1; i++){
         mensagem += arguments[i]
         if (i < arguments.length - 2){
             mensagem += ', '
@@ -124,14 +145,7 @@ ola2("Diogo", "Fernanda", "Gabriel", "Guilherme")
 ola2("Cadu", "Cyntia", "Lucas")
 console.log()
 
-//ESCOPO DE VARIÁVEIS
-//var - Escopo global
-//let - escopo local
-var nome = 'Gabriel'
-function Ola(){
-  let nome = 'Diogo'
-  console.log(nome)
-}
+
 
 console.log(nome)
 Ola()
