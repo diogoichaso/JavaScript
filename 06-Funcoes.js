@@ -134,3 +134,15 @@ function fatorial(num){
 }
 
 console.log(fatorial(5))
+
+//ESCOPO DE VARIÁVEIS
+//var - Escopo global
+//let - escopo local
+var nome = 'Gabriel'
+function Ola(){
+  let nome = 'Diogo'
+  console.log(nome)
+}
+
+console.log(nome)
+Ola()
