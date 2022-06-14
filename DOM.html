@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta lang="pt-br"
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DOM</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1  id="titulo1">Teste de DOM</h1>
+  <h2 id="titulo2"></h2>
+  <h2 class="titulo3"></h2>
+  <h3></h3>
+  <h1>EVENTOS INLINE</h1>
+  <button onclick="ola()">Teste Evento Inline</button>
+  <button id='bt'>Teste Evento</button>
+  <button id='bt2'>Teste addEventListener()</button>
+  <br>
+  <input type="text" onkeypress="ola()"/>
+  <script>
+/*
+Identificar um objeto da árvore
+document.getElementById()
+document.getElementsByClassName()
+document.getElementsByTagName()
+*/
+    var obj1 = document.getElementById('titulo2')
+    obj1.innerText = 'Teste getElementById()'
+    var obj2 = document.getElementsByClassName('titulo3')[0]
+    obj2.innerText = 'Teste getElementsByClassName()'
+    var obj3 = document.getElementsByTagName('h3')[0]
+    obj3.innerText = 'Teste de geleElementsByTagName()'
+    obj3.style.color = 'red'
+
+//Eventos
+//Resposta da interface a um estímulo
+  function ola() {
+    alert('Olá, tudo bem?')
+  }
+  var btn = document.getElementById('bt')
+  btn.onclick = function() {
+    alert('Olá, tudo bem?')
+  }
+
+  var btn2 = document.getElementById('bt2')
+  btn2.addEventListener("click", ola)
+  </script>
+</body>
+
+</html>
