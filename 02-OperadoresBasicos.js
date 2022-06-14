@@ -13,7 +13,16 @@ NaN: Not a Number
 ++: incrementar em 1
 --: decrementar em 1
 +=2: incrementar em 2
--=2:
+-=2: decrementar em 2
+
+ORDEM DE PRECEDÊNCIA
+1 - Parênteses
+2 - Expenenciação
+3 - Multiplicação
+4 - Divisão
+5 - Divisão Inteira
+6 - soma
+7 - subtração
 
 String:
 Declaração entre '' ou ""
