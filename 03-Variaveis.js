@@ -13,7 +13,9 @@ var nomeDaVariável
 
 Declaração por var equivale a uma "variável global"
 
-Regras de nomeaçao de variável
+Agrupamento de declarações de Variáveis
+var nome = "Diogo", idade = 41
+var dataNascimento, cpf 
 */
 console.log('Number')
 var x = 2
@@ -24,8 +26,7 @@ console.log(y)
 console.log(z)
 x = 3
 console.log(x + y)
-var a = 1.5
-var b = 2.3
+var a = 1.5, b = 2.3
 console.log(a + b)
 console.log(a + x)
 var i=5
