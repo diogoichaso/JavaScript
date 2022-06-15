@@ -162,6 +162,4 @@ console.log()
 console.log(Date())//Retorna da data e hora corrente
 console.log(new Date())
 console.log(new Date(2022, 3, 22))
-console.log(new Dates (2022, 3, 22, 10, 20, 59)
-
-
+console.log(new Dates (2022, 3, 22, 10, 20, 59))
