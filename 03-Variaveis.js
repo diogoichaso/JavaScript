@@ -1,13 +1,27 @@
 /*
+Convenções de nomenclatura
+-Não pode conter espaço
+-Separação de palavras por Camel case ou Snake case
+    Camel case: nomeCompleto
+    Snake case: nome_completo
+-Inicar com letra, _ ou $
+-Não pode palavra reservada
+
 Declaração de Variáveis
 
-var variável
+var nomeDaVariável
+
+Declaração por var equivale a uma "variável global"
+
+Regras de nomeaçao de variável
 */
 console.log('Number')
 var x = 2
 var y = 1
+var z
 console.log(x)
 console.log(y)
+console.log(z)
 x = 3
 console.log(x + y)
 var a = 1.5
@@ -64,6 +78,11 @@ console.log(!verdade && !verdade)
 console.log(!mentira && !mentira)
 console.log()
 
+console.log('DATE')
+var dataNascimento = new Date(1980, 11, 08)
+console.log(dataNascimento)
+console.log()
+
 console.log('Conversão de Tipos: ')
 console.log(String(2) + 2)
 console.log(Number("5") + 5)
@@ -72,7 +91,11 @@ console.log(typeof("4"))
 console.log(typeof(3))
 console.log(typeof(true))
 
-//Constantes - não podem ser alteradas após declaração
+/*
+Constantes - não podem ser alteradas após declaração
+Escopo de constante é local
+Nomenclatura normalmente é SCREAMING_SNAKE_CASE
+*/
 
 const cpf = '123.456.789-00'
 console.log(cpf)
