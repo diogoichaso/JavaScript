@@ -1,7 +1,7 @@
 //OBJETOS
 //Estruturas de dados 
 //Criação Direta
-var pessoa = {
+const pessoa = {
     //Propriedades ou Atributos
     nome: 'Diogo',
     idade: 41,
@@ -24,6 +24,7 @@ var pessoa = {
     }
 }
 console.log(pessoa)
+console.log(`Dados da pessoa: ${JSON.stringfy(pessoa)}`)
 console.log(`pessoa.nome: ${pessoa.nome}`)
 console.log(`pessoa['nome']: ${pessoa['nome']}`)
 console.log(pessoa['cpf'])
@@ -36,7 +37,7 @@ console.log()
 //Declaração de Objetos
 //"Criação Fragmentada"
 console.log('Criação Fragmentada')
-var pessoa = {}
+const pessoa = {}
 pessoa.nome = "Diogo"
 console.log(pessoa)
 pessoa.idade = 41
@@ -80,9 +81,9 @@ console.log()
 
 //Igualdade de objetos
 console.log('Igualdade de objetos')
-var pessoa1 = {nome: "Diogo", idade: 41, time: 'Flamengo'}
-var pessoa2 = pessoa1 // pessoa 2 é uma referência a pessoa 1. "Mesma pessoa"
-var pessoa3 = {nome: "Diogo", idade: 41, time: 'Flamengo'}
+const pessoa1 = {nome: "Diogo", idade: 41, time: 'Flamengo'}
+const pessoa2 = pessoa1 // pessoa 2 é uma referência a pessoa 1. "Mesma pessoa"
+const pessoa3 = {nome: "Diogo", idade: 41, time: 'Flamengo'}
 console.log(pessoa1 == pessoa2)
 console.log(pessoa1 == pessoa3)
 console.log(`pessoa1.time: ${pessoa1.time}`)
@@ -95,7 +96,7 @@ console.log()
 //Copiando Objeto
 console.log('Copiando objeto')
 console.log(pessoa1)
-var pessoa4 = Object.create(pessoa1)//"Cria um clone" - Se nenhum atribuito for instanciado, utiliza o atributo do objeto pai
+const pessoa4 = Object.create(pessoa1)//"Cria um clone" - Se nenhum atribuito for instanciado, utiliza o atributo do objeto pai
 console.log(pessoa4)
 pessoa4.time = 'Flamengo'
 console.log(`pessoa1.time: ${pessoa1.time}`)
@@ -168,7 +169,7 @@ console.log()
 
 //FILTRANDO
 console.log('FILTRANDO')
-var filme = [
+const filme = [
     {titulo: 'Titanic', duracao: 195, nota: 7.5},
     {titulo: 'Vingadores', duracao: 203, nota: 9.5},
     {titulo: 'Mr Bean', duracao: 90, nota: 6.5}
@@ -190,7 +191,7 @@ console.log(filmesRuins)
 console.log()
 
 
-var convidados = [
+const convidados = [
     {nome: 'Daniel', vip: true, idade: 21},
     {nome: 'Gabriel', vip: true, idade: 54},
     {nome: 'Diogo', vip: false, idade: 41} 
