@@ -30,6 +30,11 @@ var a = 1.5, b = 2.3
 console.log(a + b)
 console.log(a + x)
 var i=5
+var num = 1
+console.log(num++)
+console.log(++num)
+console.log(num--)
+console.log(--num)
 console.log(i+=2)
 console.log(i-=2)
 console.log(i*=2)
