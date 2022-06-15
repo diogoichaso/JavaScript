@@ -1,7 +1,7 @@
 //OBJETOS
 //Estruturas de dados 
 //Criação Direta
-const pessoa = {
+const pessoaA = {
     //Propriedades ou Atributos
     nome: 'Diogo',
     idade: 41,
@@ -191,7 +191,7 @@ console.log(filmesRuins)
 console.log()
 
 
-const convidados = [
+const convidados1 = [
     {nome: 'Daniel', vip: true, idade: 21},
     {nome: 'Gabriel', vip: true, idade: 54},
     {nome: 'Diogo', vip: false, idade: 41} 
