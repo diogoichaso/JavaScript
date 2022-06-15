@@ -38,8 +38,27 @@ Outras formas de escape: alternância entre tipos de aspas
       'Aqui vai um "texto" de exemplo'
 
 Booleano
-Verdadeiro: true
-Falso: false
+Verdadeiro: true, ou
+  {}
+  []
+  1
+  1.2
+  -1
+  -1.2
+  Infinity
+  -Infinity
+  "String Preenchida"
+
+Falso: false, ou
+  0
+  -0
+  0n
+  ""
+  ''
+  ``
+  null
+  indefined
+  NaN
 
 Operadores Lógicos:
 Maior: >
@@ -47,10 +66,12 @@ Maior ou igual: >=
 Menor: <
 Menor ou igual: <=
 Igual: ==
+Igualdade Estrita (valor e tipo)
 Diferente: !=
 E: &&
 Ou: ||
 Negação: !
+XOR - OU exclusivo: ^
 
 Data:
 Objeto Date
