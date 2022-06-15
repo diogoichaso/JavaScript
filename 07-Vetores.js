@@ -1,6 +1,6 @@
 //Declarando Array
 console.log('Declarando Array')
-var nome = ['Diogo', 'Fraga', 'Rocha', 'Ichaso']
+var nome = ['Diogo', 'Fraga', 'Rocha', 'Ichaso', 41, "08/12/1980"]
 console.log(`nomes[0]: ${nome[0]}`)
 console.log(`nomes[3]: ${nome[3]}`)
 console.log()
