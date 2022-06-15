@@ -49,6 +49,11 @@ for(var l in frase){
 console.log(novaFrase)
 console.log(frase.slice(2,5))
 console.log(frase.split('t'))
+//Interpolação de texto com variável
+var nome, idade
+nome = "Diogo"
+idade = 41
+console.log(`${nome} tem ${idade} anos`)
 console.log()
 
 console.log('BOOLEANO')
