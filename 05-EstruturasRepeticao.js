@@ -26,11 +26,28 @@ do{
 
 console.log()
 
-for (i=1; i<=10; i++){
+for (let i=1; i<=10; i++){
     console.log(`Passo ${i}`)
+}
+
+for (let i = 10; i > 0; i--){
+    console.log(`Passo ${i}`)  
 }
 
 //FOR infinito
 for(;;){
     break
+}
+
+//Fon in
+const nomes = ['Diogo', 'Fraga', 'Rocha', 'Ichaso']
+
+for (let n in nomes){
+    console.log(nomes[n])
+}
+console.log()
+
+//for of
+for (let nome of nomes){
+    console.log(nome)
 }

@@ -23,20 +23,31 @@ const pessoaA = {
         console.log(`Bom dia, ${nome}`)
     }
 }
-console.log(pessoa)
-console.log(`Dados da pessoa: ${JSON.stringfy(pessoa)}`)
-console.log(`pessoa.nome: ${pessoa.nome}`)
-console.log(`pessoa['nome']: ${pessoa['nome']}`)
-console.log(pessoa['cpf'])
-console.log(pessoa.cpf)
-console.log(pessoa.hobies[1])
-pessoa.fazerAniversario()
-pessoa.bomDia('Fernanda')
+console.log(pessoaA)
+console.log(`Dados da pessoa: ${JSON.stringify(pessoaA)}`)
+console.log(`pessoa.nome: ${pessoaA.nome}`)
+console.log(`pessoa['nome']: ${pessoaA['nome']}`)
+console.log(pessoaA['cpf'])
+console.log(pessoaA.cpf)
+console.log(pessoaA.hobies[1])
+pessoaA.fazerAniversario()
+pessoaA.bomDia('Fernanda')
 console.log()
+
+//Consulta de atributos de um objeto
+console.log('Consulta de atributos de um objeto')
+for (let prop in pessoaA){
+    if(typeof(prop) == Object){
+        console.log(`${prop}: ${JSON.stringify(pessoaA)}`)  
+    }else{
+        console.log(`${prop}: ${pessoaA[prop]}`)
+    }
+}
+
 
 //Declaração de Objetos
 //"Criação Fragmentada"
-console.log('Criação Fragmentada')
+console.log('\nCriação Fragmentada')
 const pessoa = {}
 pessoa.nome = "Diogo"
 console.log(pessoa)
@@ -197,7 +208,7 @@ const convidados1 = [
     {nome: 'Diogo', vip: false, idade: 41} 
 ]
 
-var listaVIP = convidados.filter(function(item){
+var listaVIP = convidados1.filter(function(item){
     return item.vip
 })
 console.log('Filtro por característa VIP')
