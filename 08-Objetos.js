@@ -178,6 +178,36 @@ function compareIdade(a,b) {
 console.log(alunos.sort(compareIdade))
 console.log()
 
+//Convertendo JSON
+console.log('\nConvertendo JSON')
+const pessoas = [
+  {
+    id: 1,
+    nome: 'Diogo',
+    ultNome: 'Ichaso',
+    dataNasc: new Date(1980, 11, 8).toString(),
+    endereco: {
+      bairro: 'Laranjeiras',
+      cidade: 'Rio de Janeiro'
+    }
+  },
+  {
+    id: 2,
+    nome: 'Fernanda',
+    ultNome: 'Montesuma',
+    dataNasc: new Date(1982, 2, 17).toString(),
+    endereco: {
+      bairro: 'Leme',
+      cidade: 'São Paulo'
+    }
+  }
+]
+
+console.log(pessoas)
+console.log(JSON.stringify(pessoas))
+var json = '[{"id":1,"nome":"Diogo","ultNome":"Ichaso","dataNasc":"Mon Dec 08 1980 00:00:00 GMT+0000 (Coordinated Universal Time)","endereco":{"bairro":"Laranjeiras","cidade":"Rio de Janeiro"}},{"id":2,"nome":"Fernanda","ultNome":"Montesuma","dataNasc":"Wed Mar 17 1982 00:00:00 GMT+0000 (Coordinated Universal Time)","endereco":{"bairro":"Leme","cidade":"São Paulo"}}]'
+console.log(JSON.parse(json))
+
 //FILTRANDO
 console.log('FILTRANDO')
 const filme = [

@@ -1,4 +1,15 @@
 /*
+Constantes - não podem ser alteradas após declaração
+Escopo de constante é local
+Nomenclatura normalmente é SCREAMING_SNAKE_CASE
+*/
+
+const cpf = '123.456.789-00'
+console.log(cpf)
+
+cpf = '009.876.543-21'
+
+/*
 Convenções de nomenclatura
 -Não pode conter espaço
 -Separação de palavras por Camel case ou Snake case
@@ -17,7 +28,8 @@ Agrupamento de declarações de Variáveis
 var nome = "Diogo", idade = 41
 var dataNascimento, cpf 
 */
-console.log('Number')
+
+console.log('\nNumber')
 var x = 2
 var y = 1
 var z
@@ -38,9 +50,22 @@ console.log(--num)
 console.log(i+=2)
 console.log(i-=2)
 console.log(i*=2)
-console.log()
-
-console.log('String')
+//Casas Decimais
+console.log('\nCasa Decimais')
+var valor = 1234.56
+console.log(valor.toFixed(2))
+console.log(valor.toFixed(1))
+console.log(valor.toFixed(3))
+console.log(Math.ceil(valor))
+console.log(Math.floor(valor))
+console.log(Math.round(valor))
+console.log(
+  new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  }).format(valor)
+)
+console.log('STRING')
 var frase = 'Teste de String'
 console.log(frase)
 console.log(frase.toLocaleLowerCase())
@@ -59,6 +84,41 @@ var nome, idade
 nome = "Diogo"
 idade = 41
 console.log(`${nome} tem ${idade} anos`)
+//String <==> Array
+console.log('\nString <==> Array')
+var nome = 'Diogo'
+console.log(nome[0])
+for (let l of nome){
+  console.log(l)
+}
+console.log(nome.length)
+
+var vetor = [1, 2, 3, 4, 5]
+console.log(vetor.join())
+console.log(vetor.join(" - "))
+
+//Separando e Juntando Strings
+console.log('\nSeparando e Juntando Strings')
+var frase = 'Eu sou um cara legal!'
+console.log(frase.split(" ").join('-'))
+
+//Localizando Strings
+console.log('\nLocalizando Strings')
+console.log(frase.includes('!'))
+console.log(frase.includes('Diogo'))
+
+//Substituindo String
+console.log('\nSubstituindo String')
+var frase1 = 'Gustavo é um cara legal'
+console.log(frase1.replace('Gustavo', 'Diogo'))
+var valor1 = 1234.567
+console.log(valor1.toFixed(2).replace('.', ','))
+
+//Contar Dígitos
+console.log('\nContar Dígitos')
+var nome = 'Diogo'
+var numero = 12345
+console.log(String(numero).length)
 console.log()
 
 console.log('BOOLEANO')
@@ -124,20 +184,39 @@ console.log(hoje.getDay())
 console.log()
 
 console.log('Conversão de Tipos: ')
-console.log(String(2) + 2)
-console.log(Number("5") + 5)
+// Number <==> String
+console.log('Number <==> String')
+var num = "2"
+console.log(num)
+console.log(typeof (num))
+var numNum = Number(num)
+console.log(numNum)
+console.log(typeof (numNum))
+var numStr = String(numNum)
+console.log(numStr)
+console.log(typeof (numStr))
+var srt = 'A'
+console.log(Number(srt))
+
+//Number & String <==> Boolean
+console.log('\nNumber & String <==> Boolean')
+console.log(Boolean(""))
+console.log(Boolean('abc'))
+console.log(Boolean(0))
 console.log(Boolean(1))
-console.log(typeof("4"))
-console.log(typeof(3))
-console.log(typeof(true))
+console.log(String(true))
+console.log(String(false))
+console.log(Number(true))
+console.log(Number(false))
 
-/*
-Constantes - não podem ser alteradas após declaração
-Escopo de constante é local
-Nomenclatura normalmente é SCREAMING_SNAKE_CASE
-*/
-
-const cpf = '123.456.789-00'
-console.log(cpf)
-
-cpf = '009.876.543-21'
+//String <==> Date
+console.log('\nString <==> Date')
+//Date é no formarto mm/dd/aaaa
+var data = new Date("12/30/2022 12:10:01")
+console.log(data)
+data = new Date("11 29 2022 12:10:01")
+console.log(data)
+var dataStr = new Date().toString()
+console.log(dataStr)
+var dataIso = new Date().toISOString()
+console.log(dataIso)
