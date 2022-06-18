@@ -4,6 +4,9 @@ var nome = ['Diogo', 'Fraga', 'Rocha', 'Ichaso', 41]
 console.log(`Nome(nomes[0]): ${nome[0]}`)
 console.log(`Último sobrenome(nomes[3]): ${nome[3]}`)
 console.log(`Idade(nome[4]: ${nome[4]}`)
+console.log(nome.length)
+console.log(nome.slice(2))
+console.log(nome.slice(1, 3))
 console.log()
 
 var convidados = []
@@ -14,6 +17,7 @@ for(var i = 0; i < qtdConvidados; i++){
     
 }
 console.log(convidados)
+console.log(convidados.length)
 console.log()
 
 //Incluir no final do vetor
@@ -82,12 +86,25 @@ console.log()
 
 //Uso de String como vetor
 frase = 'Olá Mundo!'
-for(var i in frase){
+for(let i in frase){
     console.log(frase[i])
 }
 
+//Concatenação de Vetores
+console.log('Concatenação de Vetores')
+let vet1 = [1,2,3,4,5]
+let vet2 = [6,7,8,9,0]
+console.log(vet1.concat(vet2))
+
+//Desestruturação de Vetores
+console.log('Desestruturação de Vetores')
+let vetor = [1,2,3,4,5]
+let [n1, n2] = vetor
+console.log('n1', n1)
+console.log('n2', n2)
+
 // VETOR MULTIDIMENSIONAL - MATRIZES
-console.log('MATRIZ MULTIDIMENSIONAL - MATRIZES')
+console.log('\nMATRIZ MULTIDIMENSIONAL - MATRIZES')
 var contribuintes = [["Diogo", 41, "000.000.000-01"], ["Fernanda", 40, "000.000.000-02"], ["Gabriel", 6, "000.000.000-03"], ["Gulherme", 4, "000.000.000-04"]]
 console.log(contribuintes)
 console.log()
@@ -100,14 +117,16 @@ var resultado =[]
 resultado = numeros.filter(function(item){
     return item > 10
 })
+
+resultado = numeros.filter((item) => item > 10)
+console.log(resultado)
+
 console.log('Filto números maiores de 10: ')
 console.log(resultado)
 console.log()
 var nomes = ["Bruno", "Zezinho", "Fulano", "Douglas"]
 
-resultado = nomes.filter(function(item){
-    return item.charAt(0) == 'Z'
-})
+resultado = nomes.filter((item) => item.charAt(0) == 'Z')
 console.log('Filtro nome que començam com a letra "Z"')
 console.log(resultado)
 console.log()
@@ -125,6 +144,15 @@ console.log(resultadoPar)
 console.log(resultadoImpar)
 console.log()
 
+const people = [
+    {name: "Diogo", age: 41},
+    {name: "Fernada", age: 40},
+    {name: 'Gabiel', age: 6},
+    {name: 'Guilherme', age: 4}
+]
+const maior = people.filter((p) => p.age >= 18 )
+console.log(maior)
+
 //MAPEANDO ARRAYS - Alterada dados do Array
 
 //Dobra os números de um array
@@ -132,7 +160,7 @@ var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 var dobrados = numeros.map(function(item){
     return item * 2
 })
-console.log('Dobra os números de um array')
+console.log('\nDobra os números de um array')
 console.log(dobrados)
 console.log()
 
